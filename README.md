@@ -7,6 +7,12 @@ The hard rule is simple: document geometry may be created only from a verified
 `FontHandle`. A family name is catalog input; it is never accepted by the
 shaper. That removes silent fallback from the measurement path.
 
+This package is the composition-time font companion to
+[FrameForge](https://github.com/pedroanisio/frameforge), which owns the document
+model, authoring SDK, validation, and rendering pipeline. The repositories
+currently meet through FrameForge's `fp_version: 1` closure contract; FrameForge
+does not yet import or delegate SDK measurement to this package.
+
 ## The workflow
 
 1. Ask the catalog which exact faces are available.
